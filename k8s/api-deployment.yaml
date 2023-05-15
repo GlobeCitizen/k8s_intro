@@ -15,5 +15,8 @@ spec:
       containers:
         - name: api
           image: localhost:5000/api:v1
+          env:
+            - name: REDIS_URL
+              value: redis://redis-service:6379
           ports:
             - containerPort: 1337
