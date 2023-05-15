@@ -93,7 +93,21 @@ kubectl apply -f redis-deployment.yaml
 ```
 
 ### 3. Expose the API Service using NGINX Ingress
-1. Create an Ingress YAML file named api-ingress.yaml:
+1. Create a service YAML file named api-service.yaml:
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-service
+spec:
+  selector:
+    app: api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 1337
+```
+2. Create an Ingress YAML file named api-ingress.yaml:
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
