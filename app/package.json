@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "name": "@episen-sca/app",
+  "version": "0.0.0",
+  "author": "Steven Enten <steven@enten.fr>",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/enten/episen-sca/tree/main/projects/app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enten/episen-sca"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "node-dev --inspect=0.0.0.0 -- ./lib/main.js",
+    "dev:poll": "node-dev --poll --inspect=0.0.0.0 -- ./lib/main.js",
+    "start": "node ./lib/main.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watchAll"
+  },
+  "dependencies": {
+    "redis": "^4.6.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "jest": "^29.4.3",
+    "node-dev": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*_spec.js"
+    ]
+  }
+}

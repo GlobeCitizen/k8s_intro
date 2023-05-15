@@ -1,0 +1,8 @@
+coverage/
+node_modules/
+test/
+.dockerignore
+.gitignore
+.npmignore
+Dockerfile
+npm-debug.log
