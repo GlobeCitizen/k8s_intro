@@ -4,7 +4,7 @@ metadata:
   name: api-ingress
 spec:
   rules:
-    - host: <your-api-domain.com>
+    - host: localhost
       http:
         paths:
           - path: /
